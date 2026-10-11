@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:n_tana/HomePage.dart';
-import 'package:n_tana/LoginScreen.dart';
+import 'package:n_tana/core/theme/app_theme.dart';
+import 'package:n_tana/features/auth/presentation/login_screen.dart';
 
-void main() => runApp(
-    const MyApp()
-);
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -12,10 +10,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'Trouver un objet perdu',
       debugShowCheckedModeBanner: false,
-      home: LoginScreen(),
+      theme: AppTheme.light,
+      home: const LoginScreen(),
     );
   }
 }
-
-
